@@ -1,9 +1,14 @@
-def floyd(row, n):
-    count = n
-    for i in range(1,row+1):
-        for c in range(1, i+1):
-            print('%3d' %count, end =' ')
-            count +=1
-        print(' ')
+def floyd(rows, n):
 
-print(floyd(n = int(input('Enter First Digit: ')),row = int(input('Enter Number of Rows: '))))
+    count = n
+    for i in range(1, rows + 1):
+
+        for _ in range(1, i + 1):
+            print(count, end=" ")
+            count += 1
+
+        print("")
+
+
+floyd(int(input('Enter the Number of Rows: ')),
+      int(input('Enter the Starting Digit: ')))
