@@ -1,7 +1,8 @@
 # Write a python program that uses datetime module within a class , takes a birthday as
 # input and prints user’s age and the number of days, hours ,minutes and seconds until
 # their next birthday.
-from datetime import date
+
+import datetime as D
 
 
 class Birthdaytimer:
@@ -11,13 +12,14 @@ class Birthdaytimer:
         self.day = day
 
     def findAge(self):
-        self.age = date.today().year - self.year - ((date.today().month,
-                                                     date.today().day) < (self.month, self.day))
+        self.age = D.datetime.now().year - self.year - ((D.datetime.now().month,
+                                                         D.datetime.now().day) < (self.month, self.day))
         print(f'Current Age: {self.age}')
 
     def daysLeft(self):
-        self.day = date(date.today().year, self.month, self.day) - date.today()
-        print(f'{(self.day).days} days left for your birthday')
+        self.day = D.datetime(D.datetime.now().year,
+                              self.month, self.day, 0, 0, 0, 0) - D.datetime.now()
+        print(f'Time Left: {self.day}s')
 
 
 timer = Birthdaytimer(
