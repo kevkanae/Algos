@@ -1,10 +1,10 @@
 # Develop a programyDict to print the frequency of words
 
-def frequency(str):
+def frequency(string):
     myDict = {}
     word = ""
-    for i in range(len(str)):
-        if (str[i] == ' '):
+    for i in range(len(string)):
+        if (string[i] == ' '):
             if (word not in myDict):
                 myDict[word] = 1
                 word = ""
@@ -12,7 +12,7 @@ def frequency(str):
                 myDict[word] += 1
                 word = ""
         else:
-            word += str[i]
+            word += string[i]
     if (word not in myDict):
         myDict[word] = 1
     else:
