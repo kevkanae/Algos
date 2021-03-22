@@ -5,16 +5,15 @@
 using namespace std;
 int main()
 {
-    int T, N, countdown, temp;
+    int T, N, K, temp;
     vector<int> arr;
     cin >> T;
     for (int i = 0; i < T; i++)
     {
         int count = 0;
-
         arr.clear();
-        cin >> N >> countdown;
-        int a = countdown;
+        cin >> N >> K;
+        int a = K;
         for (int j = 0; j < N; j++)
         {
             cin >> temp;
@@ -27,7 +26,7 @@ int main()
                 a--;
                 if (a == 0)
                 {
-                    a = countdown;
+                    a = K;
                     count++;
                 }
             }
